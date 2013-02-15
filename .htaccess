@@ -22,7 +22,6 @@ RewriteRule ^(.*).php$ /$1.md [L,NC]
 </IfModule>
 DirectoryIndex index.md
 <IfModule mod_actions.c>
-SetEnv MOD_mod_actions 1
 AddHandler markdown .md
-Action markdown /markdown/handler.php
+Action markdown markdown/handler.php
 </IfModule>
