@@ -1,0 +1,25 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+####################
+# Stop Deeplinking #
+####################
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?seydesign\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?seydoggy\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?realmacsoftware\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteRule \.(jpeg|JPEG|jpe|JPE|jpg|JPG|gif|GIF|png|PNG|mng|MNG|ico|ICO|icon|ICON)$ - [F]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteBase /
+##############
+# PRETTY URL #
+##############
+RewriteRule ^(.*).php$ /$1.md [L,NC]
+</IfModule>
+DirectoryIndex index.md
+Action markdown /markdown/handler.php
+AddHandler markdown .md
