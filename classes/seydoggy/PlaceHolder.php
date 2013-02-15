@@ -21,10 +21,10 @@
  * @version    2.0.0
  * @since      2.0.0
  * @link       https://github.com/seyDoggy/SimpleImage
- * @see        SimpleImage, SimpleImage\SimpleImage()
+ * @see        SimpleImage, seydoggy\SimpleImage()
  */
 
-namespace SimpleImage\PlaceHolder;
+namespace seydoggy;
 
 /**
  * Generates random placeholder image
@@ -39,10 +39,10 @@ namespace SimpleImage\PlaceHolder;
  * @license    Dual http://opensource.org/licenses/MIT MIT and  http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @version    1.0.0
  * @link       https://github.com/seyDoggy/Simple_Image_PlaceHolder
- * @see        SimpleImage, SimpleImage\SimpleImage()
+ * @see        SimpleImage, seydoggy\SimpleImage()
  * @since      Class available since Release 1.0.0
  */
-class PlaceHolder extends \SimpleImage\SimpleImage
+class PlaceHolder extends \seydoggy\SimpleImage
 {
 	/**
 	 * Holds the value of the path argument passed to of constructor.
@@ -257,7 +257,7 @@ class PlaceHolder extends \SimpleImage\SimpleImage
 	{
 		try {
 			/**
-			 * uses the load method from SimpleImage\SimpleImage()
+			 * uses the load method from seydoggy\SimpleImage()
 			 */
 			$this->load($this->getRandomImage());
 			
@@ -320,7 +320,7 @@ class PlaceHolder extends \SimpleImage\SimpleImage
 				}
 
 				/**
-				 * apply SimpleImage\SimpleImage() manipulations
+				 * apply seydoggy\SimpleImage() manipulations
 				 */
 				switch ($this->effect) {
 					case 'bw':
@@ -347,7 +347,7 @@ class PlaceHolder extends \SimpleImage\SimpleImage
 			}
 			
 			/**
-			 * output the final result using SimpleImage\SimpleImage() output method
+			 * output the final result using seydoggy\SimpleImage() output method
 			 */
 			$this->output();
 

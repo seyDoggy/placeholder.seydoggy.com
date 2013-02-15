@@ -1,4 +1,4 @@
-<?php namespace SimpleImage;
+<?php namespace seydoggy;
 /*
 
   The PHP SimpleImage class - v2
