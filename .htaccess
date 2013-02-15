@@ -22,6 +22,6 @@ RewriteRule ^(.*).php$ /$1.md [L,NC]
 </IfModule>
 DirectoryIndex index.md
 <IfModule mod_actions.c>
-AddHandler markdown .md
 Action markdown /home/seydoggy/placeholder.seydoggy.com/markdown/handler.php
+AddHandler markdown .md
 </IfModule>
