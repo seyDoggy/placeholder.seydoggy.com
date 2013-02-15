@@ -141,15 +141,21 @@ function pageState($thisLink)
         <div class="container">
         <?php
 
-        require('markdown.php');
+        function __autoload($class)  
+        {  
+          $filename = str_replace('\\', '/', $class) . '.php';  
+          @require_once '../classes/'.$filename;  
+        }
 
-        $legalExtensions = array('md', 'markdown');
+        use \Michelf\MarkdownExtra;
 
         $file = realpath($_SERVER['PATH_TRANSLATED']);
-        if($file &&
-           in_array(strtolower(substr($file, strrpos($file, '.') + 1)),
-              $legalExtensions)) {
-          echo Markdown(file_get_contents($file));
+        $legalExtensions = array('md', 'markdown');
+        $text = file_get_contents($file);
+        $html = MarkdownExtra::defaultTransform($text);
+
+        if($file && in_array(strtolower(substr($file, strrpos($file, '.') + 1)), $legalExtensions)) {
+          echo $html;
         }
         else {
           echo "<p>Bad filename given</p>";

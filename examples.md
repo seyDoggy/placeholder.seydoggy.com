@@ -8,7 +8,7 @@
   <p>PlaceHolder is easy to use and keeps your content looking lively and fresh. You'll never have to open up PhotoShop to make the right-size-image to fit here or there. Give PlaceHolder the size you need in the URI and it will take care of that for you. The best part is, you'll never get broken image links again.</p>
 
   <p><img src="/images/545-200" alt="random image" class="img-polaroid" width="98%" height="auto"></p>
-  <p><code>&lt;img src="/images/545-200"&gt;</code></p>
+  <p markdown="1">`<img src="/images/545-200">`</p>
 </div>
 
 <hr id="Effects">
@@ -23,22 +23,22 @@ Here are examples of each effect. Below each image is the effect used and the co
   <div class="span3">
   	<p><img src="/images/280-280-bw" alt="random image" class="img-polaroid"/></p>
     <p>effect: <code>bw</code></p>
-    <p><code>&lt;img src="/images/280-280-bw/"&gt;</code></p>
+    <p markdown="1">`<img src="/images/280-280-bw/">`</p>
   </div>
   <div class="span3">
   	<p><img src="/images/280-280-sepia" alt="random image" class="img-polaroid"></p>
   	<p>effect: <code>sepia</code></p>
-  	<p><code>&lt;img src="/images/280-280-sepia"&gt;</code></p>
+  	<p markdown="1">`<img src="/images/280-280-sepia">`</p>
   </div>
   <div class="span3">
   	<p><img src="/images/280-280-sketch" alt="random image" class="img-polaroid"></p>
   	<p>effect: <code>sketch</code></p>
-  	<p><code>&lt;img src="/images/280-280-sketch"&gt;</code></p>
+  	<p markdown="1">`<img src="/images/280-280-sketch">`</p>
   </div>
   <div class="span3">
   	<p><img src="/images/280-280-pixelate" alt="random image" class="img-polaroid"></p>
   	<p>effect: <code>pixelate</code></p>
-  	<p><code>&lt;img src="/images/280-280-pixelate"&gt;</code></p>
+  	<p markdown="1">`<img src="/images/280-280-pixelate">`</p>
   </div>
 </div>
 
@@ -54,9 +54,9 @@ Here are examples of each effect. Below each image is the effect used and the co
   </div>
   <div class="span4">
     <p><img src="/images/370-130-0" class="img-polaroid"></p>
-    <p><code>&lt;img src="/images/370-130-0"&gt;</code></p>
+    <p markdown="1">`<img src="/images/370-130-0">`</p>
     <p><img src="/images/370-130-1" class="img-polaroid"></p>
-    <p><code>&lt;img src="/images/370-130-1"&gt;</code></p>
+    <p markdown="1">`<img src="/images/370-130-1">`</p>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ Here are examples of each effect. Below each image is the effect used and the co
 <div class="row-fluid">
   <div class="span4">
     <p><img src="/images/370-290" class="img-polaroid"></p>
-    <p><code>&lt;img src="/images/370-280"&gt;</code></p>
+    <p markdown="1">`<img src="/images/370-280">`</p>
   </div>
   <div class="span8">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis lorem sit amet tortor consequat consectetur. Nullam mattis arcu commodo dui pulvinar id sodales lacus ornare. Curabitur lacinia libero eu ipsum eleifend lobortis. Fusce sed scelerisque felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pharetra convallis lectus vitae pulvinar. Morbi adipiscing pulvinar lacus, nec tincidunt arcu feugiat rutrum. Fusce et scelerisque nulla. Suspendisse potenti. Sed in sem at orci sagittis adipiscing. Ut arcu quam, fermentum at aliquam non, sodales sit amet turpis. In porta condimentum vehicula. In vulputate, justo eu ornare eleifend, quam purus aliquet metus, et dictum purus sem eget tellus. Morbi accumsan turpis in sem accumsan lobortis. Cras rhoncus lacinia malesuada. Aliquam bibendum dapibus dui vel tincidunt.</p>
@@ -94,15 +94,15 @@ Is Markdown your web writing tool of choice? Mine too. You're in luck because Pl
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis lorem sit amet tortor consequat consectetur. Nullam mattis arcu commodo dui pulvinar id sodales lacus ornare. Curabitur lacinia libero eu ipsum eleifend lobortis. Fusce sed scelerisque felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pharetra convallis lectus vitae pulvinar. Morbi adipiscing pulvinar lacus, nec tincidunt arcu feugiat rutrum. Fusce et scelerisque nulla. Suspendisse potenti. Sed in sem at orci sagittis adipiscing. Ut arcu quam, fermentum at aliquam non, sodales sit amet turpis. In porta condimentum vehicula. In vulputate, justo eu ornare eleifend, quam purus aliquet metus, et dictum purus sem eget tellus. Morbi accumsan turpis in sem accumsan lobortis. Cras rhoncus lacinia malesuada. Aliquam bibendum dapibus dui vel tincidunt.</p></div>
 </div>
 
-<p><pre>
-.someClass {
-    background: #000 url(/images/1170-400-bw) center center no-repeat;
-    background-size: cover;
-    width:100%;
-    height: auto;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
-}
-</pre></p>
+<br>
+
+    .someClass {
+        background: #000 url(/images/1170-400-bw) center center no-repeat;
+        background-size: cover;
+        width:100%;
+        height: auto;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    }
 
 <hr id="Sliders">
 
@@ -139,43 +139,43 @@ The slider at the top of this page will have 3 different every time you hit the 
 
 ## Image Attribution ##
 
-<p class="split3">
-    <a href="http://www.flickr.com/photos/seydoggy/">http://www.flickr.com/photos/seydoggy/</a><br>
-    <a href="http://www.flickr.com/photos/shreyankg/">http://www.flickr.com/photos/shreyankg/</a><br>
-    <a href="http://www.flickr.com/photos/74339172@N04/">http://www.flickr.com/photos/74339172@N04/</a><br>
-    <a href="http://www.flickr.com/photos/chris_radcliff/">http://www.flickr.com/photos/chris_radcliff/</a><br>
-    <a href="http://www.flickr.com/photos/gunner226/">http://www.flickr.com/photos/gunner226/</a><br>
-    <a href="http://www.flickr.com/photos/garyjwood/">http://www.flickr.com/photos/garyjwood/</a><br>
-    <a href="http://www.flickr.com/photos/timg_vancouver/">http://www.flickr.com/photos/timg_vancouver/</a><br>
-    <a href="http://www.flickr.com/photos/heipei/">http://www.flickr.com/photos/heipei/</a><br>
-    <a href="http://www.flickr.com/photos/fortherock/">http://www.flickr.com/photos/fortherock/</a><br>
-    <a href="http://www.flickr.com/photos/teosaurio/">http://www.flickr.com/photos/teosaurio/</a><br>
-    <a href="http://www.flickr.com/photos/adombrowski/">http://www.flickr.com/photos/adombrowski/</a><br>
-    <a href="http://www.flickr.com/photos/40792319@N04/">http://www.flickr.com/photos/40792319@N04/</a><br>
-    <a href="http://www.flickr.com/photos/norio-nakayama/">http://www.flickr.com/photos/norio-nakayama/</a><br>
-    <a href="http://www.flickr.com/photos/photones/">http://www.flickr.com/photos/photones/</a><br>
-    <a href="http://www.flickr.com/photos/ginkgraph/">http://www.flickr.com/photos/ginkgraph/</a><br>
-    <a href="http://www.flickr.com/photos/asagayakei/">http://www.flickr.com/photos/asagayakei/</a><br>
-    <a href="http://www.flickr.com/photos/hanswillems/">http://www.flickr.com/photos/hanswillems/</a><br>
-    <a href="http://www.flickr.com/photos/victorcamera/">http://www.flickr.com/photos/victorcamera/</a><br>
-    <a href="http://www.flickr.com/photos/hanswillems/">http://www.flickr.com/photos/hanswillems/</a><br>
-    <a href="http://www.flickr.com/photos/stefanieschwarz/">http://www.flickr.com/photos/stefanieschwarz/</a><br>
-    <a href="http://www.flickr.com/photos/zmtomako/">http://www.flickr.com/photos/zmtomako/</a><br>
-    <a href="http://www.flickr.com/photos/kimeke/">http://www.flickr.com/photos/kimeke/</a><br>
-    <a href="http://www.flickr.com/photos/ucb/">http://www.flickr.com/photos/ucb/</a><br>
-    <a href="http://www.flickr.com/photos/johnji/">http://www.flickr.com/photos/johnji/</a><br>
-    <a href="http://www.flickr.com/photos/rattenteufel/">http://www.flickr.com/photos/rattenteufel/</a><br>
-    <a href="http://www.flickr.com/photos/f_mafra/">http://www.flickr.com/photos/f_mafra/</a><br>
-    <a href="http://www.flickr.com/photos/hom26/">http://www.flickr.com/photos/hom26/</a><br>
-    <a href="http://www.flickr.com/photos/rafaelmob/">http://www.flickr.com/photos/rafaelmob/</a><br>
-    <a href="http://www.flickr.com/photos/55935853@N00/">http://www.flickr.com/photos/55935853@N00/</a><br>
-    <a href="http://www.flickr.com/photos/glasgowamateur/">http://www.flickr.com/photos/glasgowamateur/</a><br>
-    <a href="http://www.flickr.com/photos/williamhook/">http://www.flickr.com/photos/williamhook/</a><br>
-    <a href="http://www.flickr.com/photos/htakashi/">http://www.flickr.com/photos/htakashi/</a><br>
-    <a href="http://www.flickr.com/photos/mattzn/">http://www.flickr.com/photos/mattzn/</a><br>
-    <a href="http://www.flickr.com/photos/fumtu/">http://www.flickr.com/photos/fumtu/</a><br>
-    <a href="http://www.flickr.com/photos/suckamc/">http://www.flickr.com/photos/suckamc/</a><br>
-    <a href="http://www.flickr.com/photos/87211531@N02/">http://www.flickr.com/photos/87211531@N02/</a>
+<p markdown="1" class="split3">
+<http://www.flickr.com/photos/seydoggy/>
+<http://www.flickr.com/photos/shreyankg/>
+<http://www.flickr.com/photos/74339172@N04/>
+<http://www.flickr.com/photos/chris_radcliff/>
+<http://www.flickr.com/photos/gunner226/>
+<http://www.flickr.com/photos/garyjwood/>
+<http://www.flickr.com/photos/timg_vancouver/>
+<http://www.flickr.com/photos/heipei/>
+<http://www.flickr.com/photos/fortherock/>
+<http://www.flickr.com/photos/teosaurio/>
+<http://www.flickr.com/photos/adombrowski/>
+<http://www.flickr.com/photos/40792319@N04/>
+<http://www.flickr.com/photos/norio-nakayama/>
+<http://www.flickr.com/photos/photones/>
+<http://www.flickr.com/photos/ginkgraph/>
+<http://www.flickr.com/photos/asagayakei/>
+<http://www.flickr.com/photos/hanswillems/>
+<http://www.flickr.com/photos/victorcamera/>
+<http://www.flickr.com/photos/hanswillems/>
+<http://www.flickr.com/photos/stefanieschwarz/>
+<http://www.flickr.com/photos/zmtomako/>
+<http://www.flickr.com/photos/kimeke/>
+<http://www.flickr.com/photos/ucb/>
+<http://www.flickr.com/photos/johnji/>
+<http://www.flickr.com/photos/rattenteufel/>
+<http://www.flickr.com/photos/f_mafra/>
+<http://www.flickr.com/photos/hom26/>
+<http://www.flickr.com/photos/rafaelmob/>
+<http://www.flickr.com/photos/55935853@N00/>
+<http://www.flickr.com/photos/glasgowamateur/>
+<http://www.flickr.com/photos/williamhook/>
+<http://www.flickr.com/photos/htakashi/>
+<http://www.flickr.com/photos/mattzn/>
+<http://www.flickr.com/photos/fumtu/>
+<http://www.flickr.com/photos/suckamc/>
+<http://www.flickr.com/photos/87211531@N02/>
 </p>
 
 [SimpleImage]: https://github.com/seyDoggy/SimpleImage "SimpleImage"
