@@ -11,7 +11,7 @@ use \Michelf\MarkdownExtra;
 if (isset($_GET['md'])) {
     $file = $_GET['md'].'.md';
 } else {
-    $file = 'index.md';
+    $file = 'README.md';
 }
 $text = file_get_contents($file);
 $html = MarkdownExtra::defaultTransform($text);
