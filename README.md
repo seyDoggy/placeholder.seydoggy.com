@@ -48,6 +48,8 @@ Why reinvent the wheel? I didn't set out to make any of this in the first place.
 
 NOTE: the .htaccess and index.php contain just enough to get you going and the folder names, paths and namespaces are arbitrary. Consider them examples of what you need at a minimum but are by no means set in stone. Change the paths and namespaces to suit your current setup. If you are pretty new at all this, consider getting PlaceHolder running all on its own in a dedicated sub-domain before trying to run it in a folder on your main domain.
 
+NOTE^2: the namespace for both my fork of SimpleImage and PlaceHolder are set to 'seydoggy' in keeping with the php-fig PSR-0 standard of `\<Vendor Name>\(<Namespace>\)*<Class Name>`. If you have an class heirarchy that suits you better then have at it.
+
 <hr id="Usage">
 
 ## Usage ##
