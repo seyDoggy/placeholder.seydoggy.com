@@ -86,7 +86,7 @@ Is Markdown your web writing tool of choice? Mine too. You're in luck because Pl
 
 <hr id="CSS">
 
-<h2>Or ss a CSS Header or Background</h2>
+<h2>Or as a CSS Header or Background</h2>
 
 <div class="phHeader">
     <div class="inner">
