@@ -156,4 +156,4 @@ Thanks. I knew you would understand.
 [Copper]: http://showcase.seydesign.com/Copper "Copper RapidWeaver theme by seydesign"
 [Nuvem]: http://showcase.seydesign.com/Nuvem "Nuvem RapidWeaver theme by seydesign"
 [PlaceHolder]: https://github.com/seyDoggy/placeholder "PlaceHolder on GitHub"
-[examples]: http://placeholder.seydoggy.com/examples.php "PlaceHolder examples"
+[examples]: http://placeholder.seydoggy.com/examples/ "PlaceHolder examples"
