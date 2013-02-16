@@ -1,4 +1,21 @@
 <?php header('Content-type: text/html; charset=utf-8');
+
+function __autoload($class)  
+{  
+  $filename = str_replace('\\', '/', $class) . '.php';  
+  @require_once './classes/'.$filename;  
+}
+
+use \Michelf\MarkdownExtra;
+
+if (isset($_GET['md'])) {
+    $file = $_GET['md'].'.md';
+} else {
+    $file = 'index.md';
+}
+$text = file_get_contents($file);
+$html = MarkdownExtra::defaultTransform($text);
+
 /*
   pageState
   - function to set page state
@@ -14,16 +31,15 @@ function pageState($thisLink)
     }
     return $pageState;
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-        <link href="css/page.css" rel="stylesheet" type="text/css">
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+        <link href="/css/page.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Cabin|Droid Serif" rel='stylesheet' type='text/css'>
         <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
@@ -65,28 +81,28 @@ function pageState($thisLink)
                                 </ul>
                             </li>
                             <li class="<?php print pageState("examples.md");?> dropdown">
-                                <a href="examples.php" class="dropdown-toggle" data-toggle="dropdown">Examples</a>
+                                <a href="/examples/" class="dropdown-toggle" data-toggle="dropdown">Examples</a>
                                 <ul class="dropdown-menu">
                                     <li class="">
-                                        <a href="/examples.php#top">Top</a>
+                                        <a href="/examples/#top">Top</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#Effects">Effects</a>
+                                        <a href="/examples/#Effects">Effects</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#Layouts">Layouts</a>
+                                        <a href="/examples/#Layouts">Layouts</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#CSS">In CSS</a>
+                                        <a href="/examples/#CSS">In CSS</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#Markdown">In Markdown</a>
+                                        <a href="/examples/#Markdown">In Markdown</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#Sliders">In Sliders</a>
+                                        <a href="/examples/#Sliders">In Sliders</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples.php#Credits">Image Credits</a>
+                                        <a href="/examples/#Credits">Image Credits</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,28 +155,9 @@ function pageState($thisLink)
         </div>
 
         <div class="container">
-        <?php
 
-        function __autoload($class)  
-        {  
-          $filename = str_replace('\\', '/', $class) . '.php';  
-          @require_once '../classes/'.$filename;  
-        }
+        <?php echo $html; ?>
 
-        use \Michelf\MarkdownExtra;
-
-        $file = realpath($_SERVER['PATH_TRANSLATED']);
-        $legalExtensions = array('md', 'markdown');
-        $text = file_get_contents($file);
-        $html = MarkdownExtra::defaultTransform($text);
-
-        if($file && in_array(strtolower(substr($file, strrpos($file, '.') + 1)), $legalExtensions)) {
-          echo $html;
-        }
-        else {
-          echo "<p>Bad filename given</p>";
-        }
-        ?>
         </div>
         <!-- Footer
         ================================================== -->
@@ -177,6 +174,6 @@ function pageState($thisLink)
           </div>
         </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.js" type="text/javascript"></script>
     </body>
 </html>

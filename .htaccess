@@ -18,10 +18,6 @@ RewriteBase /
 ##############
 # PRETTY URL #
 ##############
-RewriteRule ^(.*).php$ /$1.md [L,NC]
+RewriteRule ^([a-zA-Z0-9]+)/?$ index.php?md=$1
 </IfModule>
-DirectoryIndex index.md
-<IfModule mod_actions.c>
-Action markdown /markdown/handler.php
-AddHandler markdown .md
-</IfModule>
+DirectoryIndex index.php
