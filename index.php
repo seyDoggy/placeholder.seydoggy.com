@@ -24,10 +24,12 @@ $html = MarkdownExtra::defaultTransform($text);
 */
 function pageState($thisLink)
 {
-    $pageState = $_SERVER['PHP_SELF'];
+    $pageState = $_GET['md'];
     $pageState = strstr($pageState, $thisLink);
     if ($pageState === $thisLink) {
         $pageState = "active";
+    } else {
+	$pageState = "normal";
     }
     return $pageState;
 }
@@ -35,7 +37,7 @@ function pageState($thisLink)
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>PlaceHolder - A Random Image Placeholder Engine</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
