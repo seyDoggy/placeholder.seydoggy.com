@@ -24,11 +24,15 @@ $html = MarkdownExtra::defaultTransform($text);
 */
 function pageState($thisLink)
 {
-    $pageState = $_SERVER['PHP_SELF'];
-    $pageState = strstr($pageState, $thisLink);
-    if ($pageState === $thisLink) {
+    $pageState = "normal";
+    if (isset($_GET['md'])) {
+        if ($_GET['md'] == $thisLink) {
+            $pageState = "active";
+        }
+    } else {
         $pageState = "active";
     }
+    
     return $pageState;
 }
 ?><!DOCTYPE html>
