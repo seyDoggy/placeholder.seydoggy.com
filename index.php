@@ -29,8 +29,6 @@ function pageState($thisLink)
         if ($_GET['md'] == $thisLink) {
             $pageState = "active";
         }
-    } else {
-        $pageState = "active";
     }
 	
     return $pageState;
@@ -58,7 +56,7 @@ function pageState($thisLink)
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="/">PlaceHolder</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="<?php print pageState("index.md");?> dropdown">
+                            <li class="<?php print pageState("");?> dropdown">
                                 <a href="/" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
                                 <ul class="dropdown-menu">
                                     <li class="">
