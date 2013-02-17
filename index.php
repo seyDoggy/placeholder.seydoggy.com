@@ -31,10 +31,8 @@ function pageState($thisLink)
         }
     } else {
         $pageState = "active";
-    } else {
-	$pageState = "normal";
     }
-    
+	
     return $pageState;
 }
 ?><!DOCTYPE html>
