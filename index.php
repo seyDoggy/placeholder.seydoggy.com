@@ -84,7 +84,7 @@ function pageState($thisLink)
                                     </li>
                                 </ul>
                             </li>
-                            <li class="<?php print pageState("examples.md");?> dropdown">
+                            <li class="<?php print pageState("examples");?> dropdown">
                                 <a href="/examples/" class="dropdown-toggle" data-toggle="dropdown">Examples</a>
                                 <ul class="dropdown-menu">
                                     <li class="">
