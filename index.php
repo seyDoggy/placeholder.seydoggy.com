@@ -29,6 +29,10 @@ function pageState($thisLink)
         if ($_GET['md'] == $thisLink) {
             $pageState = "active";
         }
+    } else {
+        if ($thisLink == '') {
+            $pageState = "active";
+        }
     }
 	
     return $pageState;
