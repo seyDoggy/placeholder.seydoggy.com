@@ -8,6 +8,10 @@ h1,h2,h3,h4,h5,h6 {
 color:#5a5a5a;
 font-family:'Times New Roman',serif
 }
+
+strong {
+    font-weight: bold;
+}
 .feature{
     background-color: white;
     border: 1px solid #CFD2D2;
