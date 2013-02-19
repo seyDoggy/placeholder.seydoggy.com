@@ -79,13 +79,13 @@ function pageState($thisLink)
                                         <a href="/#Action">In Action</a>
                                     </li>
                                     <li class="">
+                                        <a href="/#Changelog">Changelog</a>
+                                    </li>
+                                    <li class="">
                                         <a href="/#Contribute">Contribute</a>
                                     </li>
                                     <li class="">
                                         <a href="/#plug">Thanks!</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/#Changelog">Changelog</a>
                                     </li>
                                 </ul>
                             </li>

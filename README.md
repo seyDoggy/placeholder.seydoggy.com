@@ -133,6 +133,11 @@ Similarly the following CSS examples will all render unique images, all with the
 
 I've made a special page for PlaceHolder so you can see it in action. Every image on the page (including the slider at the top) is generated with PlaceHolder. Under each example is the code used to request each image. Go [check it out][examples]!
 
+<hr id="Changelog">
+
+## Changelog ##
+**1.0.1:** Added simple caching to reduce server load.
+
 <hr id="Contribute">
 
 ## Contribute! ##
@@ -148,12 +153,6 @@ As I mentioned, my full time job is a theme developer at seydesign.com. I'd like
 [seydesign.com][theme developer], makers of RapidWeaver themes.
 
 Thanks. I knew you would understand.
-
-<hr id="Changelog">
-
-## Changelog ##
-
-**1.0.1:** Added simple caching to reduce server load.
 
 [Skip to installation]: #Installation
 [theme developer]: http://seydesign.com "RapidWeaver themes by seydesign"
