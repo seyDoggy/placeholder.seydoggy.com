@@ -1,6 +1,6 @@
 # The Random Image PlaceHolder #
 **AUTHOR: [Adam Merrifield][theme developer]**   
-**VERSION: [1.0.0][PlaceHolder]**
+**VERSION: [1.0.1][PlaceHolder]**
 
 [Skip to installation][]
 
@@ -148,6 +148,12 @@ As I mentioned, my full time job is a theme developer at seydesign.com. I'd like
 [seydesign.com][theme developer], makers of RapidWeaver themes.
 
 Thanks. I knew you would understand.
+
+<hr id="Changelog">
+
+## Changelog ##
+
+**1.0.1:** Added simple caching to reduce server load.
 
 [Skip to installation]: #Installation
 [theme developer]: http://seydesign.com "RapidWeaver themes by seydesign"

@@ -449,7 +449,7 @@ class PlaceHolder extends \seydoggy\SimpleImage
 			case 'path':
 				echo "Sorry Dave, I cannot find or write to the images folder with the path:
 						<p>\"$this->imageFolder\".
-						<p>Please check your spelling and try again.";
+						<p>Please check your spelling and/or permissions and try again.";
 				break;
 			
 			case 'param':

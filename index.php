@@ -84,6 +84,9 @@ function pageState($thisLink)
                                     <li class="">
                                         <a href="/#plug">Thanks!</a>
                                     </li>
+                                    <li class="">
+                                        <a href="/#Changelog">Changelog</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="<?php print pageState("examples");?> dropdown">
