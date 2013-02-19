@@ -13,8 +13,11 @@ if (isset($_GET['md'])) {
 } else {
     $file = 'README.md';
 }
-$text = file_get_contents($file);
+$text = file_get_contents('pages/'.$file);
 $html = MarkdownExtra::defaultTransform($text);
+
+$creditsText = file_get_contents('pages/credits.md');
+$credits = MarkdownExtra::defaultTransform($creditsText);
 
 /*
   pageState
@@ -87,31 +90,31 @@ function pageState($thisLink)
                                     <li class="">
                                         <a href="/#plug">Thanks!</a>
                                     </li>
+                                    <li class="">
+                                        <a href="/#Credits">Image Credits</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="<?php print pageState("examples");?> dropdown">
                                 <a href="/examples/" class="dropdown-toggle" data-toggle="dropdown">Examples</a>
                                 <ul class="dropdown-menu">
                                     <li class="">
-                                        <a href="/examples/#top">Top</a>
+                                        <a href="/examples">Examples</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples/#Effects">Effects</a>
+                                        <a href="/effects">Effects</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples/#Layouts">Layouts</a>
+                                        <a href="/layouts">Layouts</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples/#CSS">In CSS</a>
+                                        <a href="/markdown">In Markdown</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples/#Markdown">In Markdown</a>
+                                        <a href="/incss">In CSS</a>
                                     </li>
                                     <li class="">
-                                        <a href="/examples/#Sliders">In Sliders</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/examples/#Credits">Image Credits</a>
+                                        <a href="/sliders">In Sliders</a>
                                     </li>
                                 </ul>
                             </li>
@@ -164,9 +167,30 @@ function pageState($thisLink)
         </div>
 
         <div class="container">
+            <?php if (isset($_GET['md'])): ?>
+                
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="<?php print pageState("examples");?>"><a href="/examples">Examples</a></li>
+                  <li class="<?php print pageState("effects");?>"><a href="/effects">Effects</a></li>
+                  <li class="<?php print pageState("layouts");?>"><a href="/layouts">Layouts</a></li>
+                  <li class="<?php print pageState("markdown");?>"><a href="/markdown">Markdown</a></li>
+                  <li class="<?php print pageState("incss");?>"><a href="/incss">CSS</a></li>
+                  <li class="<?php print pageState("sliders");?>"><a href="/sliders">Sliders</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <?php endif ?>
 
-        <?php echo $html; ?>
-
+            <?php 
+                echo $html; 
+        
+                if (!isset($_GET['md'])) {
+                    echo $credits;
+                }
+            ?>
         </div>
         <!-- Footer
         ================================================== -->
