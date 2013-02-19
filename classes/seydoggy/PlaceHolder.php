@@ -37,7 +37,7 @@ namespace seydoggy;
  * @author     Adam Merrifield <macagp@gmail.com>
  * @copyright  Adam Merrifield
  * @license    Dual http://opensource.org/licenses/MIT MIT and  http://www.gnu.org/licenses/gpl-2.0.html GPLv2
- * @version    1.0.0
+ * @version    1.0.1
  * @link       https://github.com/seyDoggy/Simple_Image_PlaceHolder
  * @see        SimpleImage, seydoggy\SimpleImage()
  * @since      Class available since Release 1.0.0
@@ -99,6 +99,22 @@ class PlaceHolder extends \seydoggy\SimpleImage
 	private $images;
 
 	/**
+	 * The file to store array of images found in the directory
+	 * @see imageCache(), randomImage(), $imageFolder
+	 * @access private
+	 * @var mixed
+	 */
+	private $cacheFile;
+
+	/**
+	 * The number of hours to cache the image folder for
+	 * @see imageCache(), randomImage()
+	 * @access private
+	 * @var mixed
+	 */
+	private $cacheHours = 24;
+
+	/**
 	 * temporary variable for a random array value
 	 * @see getRandomImage(), $images
 	 * @access private
@@ -141,11 +157,7 @@ class PlaceHolder extends \seydoggy\SimpleImage
 		
 		$this->imageFolder = $path;
 
-		if (is_dir($this->imageFolder)) {
-
-			$this->folderHandler = opendir($this->imageFolder);
-
-		} else {
+		if (!is_dir($this->imageFolder) || !is_writable($this->imageFolder)) {
 
 			die($this->showMessage('path'));
 
@@ -209,28 +221,39 @@ class PlaceHolder extends \seydoggy\SimpleImage
 	private function getRandomImage() 
 	{
 		/**
-		 * open directory and read the filenames
+		 * check to see if the cache file exists
 		 */
-		while ($file = readdir($this->folderHandler)) {
+		$this->cacheFile = $this->imageFolder.'/_images.cache';
+
+		if (file_exists($this->cacheFile)) {
+			$stats = stat($this->cacheFile);
 
 			/**
-			 * if file isn't this directory or its parent, add it to the images
+			 * compare cache file mod time with current time
 			 */
-			if ($file != "." && $file != "..") {
+			if ($stats[9] > (time() - ((60 * 60) * $this->cacheHours))) {
+				
 				/**
-				 * checks for gif, jpg, png
+				 * get json data from cache file
 				 */
-	            if ( preg_match("/(\.gif|\.jpg|\.jpeg|\.png)$/", $file) ) {
-	                $this->images[] = $file;
-	            }
+				$jsondata = file_get_contents($this->cacheFile);
+				
+				/**
+				 * make images array from json data
+				 */
+				$this->images = json_decode($jsondata, true);
+
+			} else {
+
+				$this->imageCache();
+
 			}
 
-		}
+		} else {
+			
+			$this->imageCache();
 
-		/**
-		 * close the handler
-		 */
-		closedir($this->folderHandler);
+		}
 
 		/**
 		 * pick a random array item number
@@ -243,6 +266,48 @@ class PlaceHolder extends \seydoggy\SimpleImage
 		$this->image = $this->images[$this->num];
 
 		return $this->imageFolder.$this->image;
+	}
+
+	/**
+	 * Sets an image array and caches the results from the image folder
+	 * @return array the images found in the image folder
+	 * @access private
+	 */
+	private function imageCache()
+	{
+		/**
+		 * open directory and read the filenames
+		 */
+		$this->folderHandler = opendir($this->imageFolder);
+
+		while (false !== ($file = readdir($this->folderHandler))) {
+
+			/**
+			 * if file isn't this directory or its parent, add it to the images
+			 */
+			if ($file != "." && $file != "..") {
+				/**
+				 * checks for gif, jpg, png
+				 */
+	            if ( preg_match("/(\.gif|\.jpg|\.jpeg|\.png)$/", $file) ) {
+	                $this->images[] = $file;
+	            }
+
+			}
+
+		}
+		
+		/**
+		 * write the cache file
+		 */
+   		file_put_contents($this->cacheFile, json_encode($this->images));
+
+		/**
+		 * close the handler
+		 */
+		closedir($this->folderHandler);
+
+		return $this->images;
 	}
 
 	/**
@@ -382,7 +447,7 @@ class PlaceHolder extends \seydoggy\SimpleImage
 	{
 		switch ($message) {
 			case 'path':
-				echo "Sorry Dave, I cannot find your images folder with the path:
+				echo "Sorry Dave, I cannot find or write to the images folder with the path:
 						<p>\"$this->imageFolder\".
 						<p>Please check your spelling and try again.";
 				break;
