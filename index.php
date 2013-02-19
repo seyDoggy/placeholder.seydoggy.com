@@ -126,6 +126,9 @@ function pageState($thisLink)
                 </div>
             </div>
         </div>
+
+        <?php if (!isset($_GET['md']) || $_GET['md'] == 'sliders'): ?>
+            
         <!-- Subhead
         ================================================== -->
         <div id="myCarousel" class="carousel slide">
@@ -166,6 +169,12 @@ function pageState($thisLink)
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
         </div>
 
+        <?php else: ?>
+
+        <br>
+
+        <?php endif ?>
+        
         <div class="container">
             <?php if (isset($_GET['md'])): ?>
                 
