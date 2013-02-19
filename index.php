@@ -53,7 +53,7 @@ function pageState($thisLink)
         <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
     <body id="top">
-        <a href="https://github.com/seyDoggy/placeholder"><img style="position: absolute; top: 42px; left: 0; border: 0; z-index: 1;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/seyDoggy/placeholder"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1031;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
         <!-- Navbar
         ================================================== -->
