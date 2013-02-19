@@ -12,11 +12,11 @@ You can use your own images or any freely available creative commons images. Use
 
 ### Why did I make PlaceHolder? ###
 
-I am a [theme developer][] by day and make a [lot][Sytten] [of][tre3rty] [demo][Copper] [sites][Nuvem]. I am forever moving and changing images to keep things fresh but not without inevitably breaking or losing an image or two along the way. I wanted an image placeholder solution that would let my update or remove images without worrying about naming scheme, file type or having to update countless demo sites. I also want a variety of styles and sizes in my demo sites without the need for duplicate images for each style and size. PlaceHolder takes care of all my style and sizing needs and I don't have to worry about naming conventions, saving for web, image type or getting any broken image links.
+I am a [theme developer][] by day and make a [lot][Sytten] [of][tre3rty] [demo][Copper] [sites][Nuvem]. I am forever moving and changing images to keep things fresh but not without inevitably breaking or losing an image or two along the way. I wanted an image placeholder solution that would let me update or remove images without worrying about naming scheme, file type or having to update countless demo sites. I also want a variety of styles and sizes in my demo sites without the need for duplicate images for each variation. PlaceHolder takes care of all my style and sizing needs and I don't have to worry about naming conventions, saving for web, image type or getting any broken image links.
 
 ### Why Server-side? ###
 
-Simply put, server-side is faster and more powerful and far more efficient. While some of the client-side JavaScript solutions, jQuery plugins included, might seem easier to add to a page on a one off basis, consider how their poor performance looks to your customer when their trying to view your progress on their "big site".
+Simply put, server-side is faster and more powerful and far more efficient. While some of the client-side JavaScript solutions, jQuery plugins included, might seem easier to add to a page on a one off basis, consider how their poor performance looks to your customer when they're trying to view your progress on their "big site".
 
 What you request is what you get. With PlaceHolder, when you request an image that is 370px x 130px, for instance, you are serving up an image that is 370px x 130px. Period. That's about 15KB worth of image and no unnecessary client-side overhead.
 
