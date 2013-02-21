@@ -9,7 +9,7 @@
 <br>
 
     .someClass {
-        background: #000 url(/images/1170-400-bw) center center no-repeat;
+        background: #000 url(/images/1170-250-bw) center center no-repeat;
         background-size: cover;
         width:100%;
         height: auto;

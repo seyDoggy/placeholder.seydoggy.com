@@ -127,7 +127,7 @@ function pageState($thisLink)
             </div>
         </div>
 
-        <?php if (!isset($_GET['md']) || $_GET['md'] == 'sliders'): ?>
+        <?php if (!isset($_GET['md'])): ?>
             
         <!-- Subhead
         ================================================== -->
@@ -140,29 +140,29 @@ function pageState($thisLink)
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="phSlider">
-                        <img src="/images/1500-400" alt="random slider image 1" width="100%" height="auto">
+                        <img src="/images/1170-300" alt="random slider image 1" width="100%" height="auto">
                     </div>
                     <div class="carousel-caption">
                         <h4>PlaceHolder - A Random Image Engine</h4>
-                        <p>Fill your demo site with real images, not gray boxes. Host your own image server and know it'll be around as long as you are. The above image uses: <code>&lt;img src="/images/1500-400"&gt;</code></p>
+                        <p>Fill your demo site with real images, not gray boxes. Host your own image server and know it'll be around as long as you are. The above image uses: <code>&lt;img src="/images/1170-300"&gt;</code></p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="phSlider">
-                        <img src="/images/1500-400-sepia" alt="random slider image 2" width="100%" height="auto">
+                        <img src="/images/1170-300-sepia" alt="random slider image 2" width="100%" height="auto">
                     </div>
                     <div class="carousel-caption">
                         <h4>Not Just A Pretty Picture</h4>
-                        <p>Don't make copies of the same image for multiple sizes, ratios and effects. PlaceHolder can handle that for you. One image, so many possibilities. The above image uses: <code>&lt;img src="/images/1500-400-sepia"&gt;</code></p>
+                        <p>Don't make copies of the same image for multiple sizes, ratios and effects. PlaceHolder can handle that for you. One image, so many possibilities. The above image uses: <code>&lt;img src="/images/1170-300-sepia"&gt;</code></p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="phSlider">
-                        <img src="/images/1500-400-pixelate" alt="random slider image 3" width="100%" height="auto">
+                        <img src="/images/1170-300-pixelate" alt="random slider image 3" width="100%" height="auto">
                     </div>
                     <div class="carousel-caption">
                         <h4>Keep New, Keep It Fresh</h4>
-                        <p>With PlaceHolder the images are new and random each time the page is loaded. Every visit is different. The above image uses: <code>&lt;img src="/images/1500-400-pixelate"&gt;</code></p>
+                        <p>With PlaceHolder the images are new and random each time the page is loaded. Every visit is different. The above image uses: <code>&lt;img src="/images/1170-300-pixelate"&gt;</code></p>
                     </div>
                 </div>
             </div>
