@@ -121,6 +121,13 @@ function pageState($thisLink)
                             <li>
                                 <a href="https://github.com/seyDoggy/placeholder" class="normal">Fork me</a>
                             </li>
+                            <li>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0 0 0 2em;">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="DGVQ9XZ9TVFZQ">
+                                    <input type="submit" value="Donate" class="btn btn-info" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
