@@ -1,9 +1,9 @@
 <?php header('Content-type: text/html; charset=utf-8');
 
-function __autoload($class)  
-{  
-  $filename = str_replace('\\', '/', $class) . '.php';  
-  @require_once './classes/'.$filename;  
+function __autoload($class)
+{
+  $filename = str_replace('\\', '/', $class) . '.php';
+  @require_once './classes/'.$filename;
 }
 
 use \Michelf\MarkdownExtra;
@@ -37,7 +37,7 @@ function pageState($thisLink)
             $pageState = "active";
         }
     }
-	
+
     return $pageState;
 }
 ?><!DOCTYPE html>
@@ -76,6 +76,9 @@ function pageState($thisLink)
                                         <a href="/#Installation">Installation</a>
                                     </li>
                                     <li class="">
+                                        <a href="/#GettingStarted">Getting Started</a>
+                                    </li>
+                                    <li class="">
                                         <a href="/#Usage">Usage</a>
                                     </li>
                                     <li class="">
@@ -86,9 +89,6 @@ function pageState($thisLink)
                                     </li>
                                     <li class="">
                                         <a href="/#Contribute">Contribute</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/#plug">Thanks!</a>
                                     </li>
                                     <li class="">
                                         <a href="/#Credits">Image Credits</a>
@@ -135,7 +135,7 @@ function pageState($thisLink)
         </div>
 
         <?php if (!isset($_GET['md'])): ?>
-            
+
         <!-- Subhead
         ================================================== -->
         <div id="myCarousel" class="carousel slide">
@@ -181,10 +181,10 @@ function pageState($thisLink)
         <br>
 
         <?php endif ?>
-        
+
         <div class="container">
             <?php if (isset($_GET['md'])): ?>
-                
+
             <div class="navbar">
               <div class="navbar-inner">
                 <ul class="nav">
@@ -197,12 +197,12 @@ function pageState($thisLink)
                 </ul>
               </div>
             </div>
-            
+
             <?php endif ?>
 
-            <?php 
-                echo $html; 
-        
+            <?php
+                echo $html;
+
                 if (!isset($_GET['md'])) {
                     echo $credits;
                 }
